@@ -1,0 +1,35 @@
+parkID,parkName,latitude,longitude,phoneNumber,email
+alca,Alcatraz Island,37.82676234,-122.4230206,415-561-4900,goga_alca_socialmedia@nps.gov
+buov,Butterfield Overland National Historic Trail,32.2768237589,-106.796583304,N/A,ntir_information@nps.gov
+cabr,Cabrillo National Monument,32.6722503,-117.2415985,6195234285,cabr_info@nps.gov
+cali,California National Historic Trail,42.3999643979,-108.702415369,N/A,ntir_information@nps.gov
+camo,Castle Mountains National Monument,35.29156348,-115.0935606,7602526100,MOJA_Superintendent@nps.gov
+chis,Channel Islands National Park,33.98680093,-119.9112735,8056585730,chis_information@nps.gov
+cech,César E. Chávez National Monument,35.22729389,-118.5615781,6618236134,cech_education@nps.gov
+deva,Death Valley National Park,36.48753731,-117.134395,7607863200,deva_information@nps.gov
+depo,Devils Postpile National Monument,37.6152564,-119.0873903,7609342289,depo_visitor_information@nps.gov
+euon,Eugene O'Neill National Historic Site,37.82604456,-122.0271566,925-228-8860,euon_general_info@nps.gov
+fopo,Fort Point National Historic Site,37.80837439,-122.473747,415-561-4959,goga_fopo_socialmedia@nps.gov
+goga,Golden Gate National Recreation Area,37.85982543,-122.6007386,415-561-4700,goga_socialmedia_goga@nps.gov
+jomu,John Muir National Historic Site,37.9828422,-122.1326097,9252288860,jomu_general_info@nps.gov
+jotr,Joshua Tree National Park,33.91418525,-115.8398125,7603675500,jotr_info@nps.gov
+juba,Juan Bautista de Anza National Historic Trail,33.8743390994,-117.224179857,(510) 232-5050,juba_info@nps.gov
+lavo,Lassen Volcanic National Park,40.49354575,-121.4075993,530 595 6100,lavo_information@nps.gov
+labe,Lava Beds National Monument,41.75915823,-121.5172189,5306678113,LABE_Information@nps.gov
+manz,Manzanar National Historic Site,36.72559195,-118.1547177,(760)878-2194,manz_information_request@nps.gov
+moja,Mojave National Preserve,35.12485941,-115.5168258,(760) 252-6100,moja_info@nps.gov
+muwo,Muir Woods National Monument,37.89658027,-122.5808047,415-561-2850,goga_muwo_socialmedia@nps.gov
+olsp,Old Spanish National Historic Trail,37.0791782514,-112.114693431,N/A,ntir_information@nps.gov
+pinn,Pinnacles National Park,36.49029208,-121.1813607,8313894486,pinn_visitor_information@nps.gov
+pore,Point Reyes National Seashore,38.05511241,-122.8797804,415-464-5100,pore_info@nps.gov
+poex,Pony Express National Historic Trail,42.2365761128,-109.266148417,N/A,ntir_information@nps.gov
+poch,Port Chicago Naval Magazine National Memorial,38.05685472,-122.0301603,9252288860,poch_general_info@nps.gov
+prsf,Presidio of San Francisco,37.797,-122.4671,415-561-4323,goga_pres_socialmedia@nps.gov
+redw,Redwood National and State Parks,41.37237268,-124.0318129,7074646101,redw_info@nps.gov
+rori,Rosie the Riveter WWII Home Front National Historical Park,37.90999027,-122.360156,5102325050,rori_gen_info@nps.gov
+safr,San Francisco Maritime National Historical Park,37.81005871,-122.4244415,4155617000,ronald_robles@nps.gov
+samo,Santa Monica Mountains National Recreation Area,34.09777606,-118.7708619,8053702301,samo_interpretation@nps.gov
+seki,Sequoia & Kings Canyon National Parks,36.71277299,-118.587429,5595653341,SEKI_information@nps.gov
+tule,Tule Lake National Monument,41.88727902,-121.3744818,(530) 664 4015,TULE_Information@nps.gov
+whis,Whiskeytown National Recreation Area,40.61359941,-122.6022657,5302423400,whis_information@nps.gov
+yose,Yosemite National Park,37.84883288,-119.5571873,209/372-0200,yose_web_manager@nps.gov
