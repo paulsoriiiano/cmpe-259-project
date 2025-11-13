@@ -4,11 +4,11 @@ Creates vector database from park data.
 
 
 from langchain.vectorstores import FAISS
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.document_loaders import JSONLoader
-from langchain_text_splitters import RecursiveCharacterTextSplitter 
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-def build_vector_db(data_path="../data/ca_state_parks.json", persist_path="faiss_index"):
+def build_vector_db(data_path="data/ca_state_parks.json", persist_path="faiss_index"):
     """ Creates a FAISS vector database given a JSON file. """
 
     jq_schema = """
@@ -32,7 +32,7 @@ def build_vector_db(data_path="../data/ca_state_parks.json", persist_path="faiss
     docs = loader.load()
 
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=750, chunk_overlap=30)
-    doc_chunks = text_splitter.split(docs)
+    doc_chunks = text_splitter.split_documents(docs)
 
     embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     db = FAISS.from_documents(doc_chunks, embedding_model)
@@ -43,5 +43,5 @@ def build_vector_db(data_path="../data/ca_state_parks.json", persist_path="faiss
 
 def load_vector_db(persist_path="faiss_index"):
     """ Loads a FAISS vector database from a path. """
-    embedding_model = HuggingFaceEmbeddings(model_nam="sentence-transformers/all-MiniLM-L6-v2")
-    return FAISS.load_local(persist_path, embedding_model)
+    embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    return FAISS.load_local(persist_path, embedding_model, allow_dangerous_deserialization=True)
