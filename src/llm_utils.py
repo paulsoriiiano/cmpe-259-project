@@ -2,25 +2,27 @@
 Loads different API-based LLMs for the project.
 """
 
-from langchain_huggingface import HuggingFaceEndpoint
+from langchain_mistralai import ChatMistralAI
+from langchain_openai import ChatOpenAI
 
 def load_model(api_token, size="small"):
     if size == "small":
-        model_name = "mistralai/Mistral-7B-v0.2"
+        llm = ChatMistralAI(
+          model = "mistral-tiny-2312",
+          api_key = api_token,
+          temperature = 0.7,
+          max_tokens = 256
+        )
     elif size == "large":
-        model_name = "meta-llama/Llama-2-13b-chat-hf"
+        llm = ChatOpenAI(
+          model = "meta-llama/Llama-3.3-70B-Instruct:groq",
+          api_key = api_token,
+          base_url = "https://router.huggingface.co/v1",
+          temperature = 0.7,
+          max_tokens = 256
+        )
     else:
         print("I am not aware of this model.")
         return
-    
-    # Create API-based LLM 
-    llm = HuggingFaceEndpoint(
-        repo_id = model_name,
-        task = "text-generation",
-        temperature = 0.7,
-        max_new_tokens = 512,
-        repetition_penalty = 1.1,
-        huggingfacehub_api_token=api_token
-    )
 
     return llm
