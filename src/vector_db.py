@@ -28,7 +28,7 @@ def build_vector_db(data_path="../data/ca_state_parks.json", persist_path="faiss
     }
     """
 
-    loader = JSONLoader(file_path=data_path, jq_schema=jq_schema, context_key="text")
+    loader = JSONLoader(file_path=data_path, jq_schema=jq_schema, content_key="text")
     docs = loader.load()
 
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=750, chunk_overlap=30)
