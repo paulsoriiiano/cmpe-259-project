@@ -44,4 +44,4 @@ def build_vector_db(data_path="../data/ca_state_parks.json", persist_path="faiss
 def load_vector_db(persist_path="faiss_index"):
     """ Loads a FAISS vector database from a path. """
     embedding_model = HuggingFaceEmbeddings(model_nam="sentence-transformers/all-MiniLM-L6-v2")
-    return FAISS.load_local(persist_path)
+    return FAISS.load_local(persist_path, embedding_model)
