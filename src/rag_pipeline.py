@@ -19,7 +19,7 @@ def build_rag_chain(llm, retriever):
 
     inputs = {
         "context": rag_context,
-        "input": query,
+        "question": query,
         "sources": rag_sources,
     }
 
@@ -35,8 +35,7 @@ def build_rag_chain(llm, retriever):
         ("human",
          """Use the following context and sources from park data to answer questions.
             If information is missing, respond with the best estimate or say "I'm not sure."
-            Always cite your sources whenever possible. 
-            Format the sources as footnotes in the end of the answer.
+            Format the sources (if available) as footnotes in the end of the answer.
 
             Context:
             {context}
@@ -45,7 +44,7 @@ def build_rag_chain(llm, retriever):
             {sources}
 
             Question:
-            {input}
+            {question}
 
             Your answer:
 
