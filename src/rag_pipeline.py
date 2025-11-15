@@ -21,7 +21,7 @@ def build_rag_chain(llm, retriever):
     inputs = {
         "context": rag_context,
         "sources": rag_sources,
-        "question": RunnablePassthrough()
+        "question": query,
     }
 
     return inputs
@@ -48,7 +48,7 @@ def build_rag_chain(llm, retriever):
   {sources}                                      
   """)
 
-  # 3. Build chahin
+  # 3. Build chain
   rag_chain = (
     RunnableLambda(retrieve_and_format)
     | prompt
