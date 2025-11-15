@@ -26,26 +26,16 @@ def build_rag_chain(llm, retriever):
     return inputs
 
   # 2. Create prompt
-  prompt = ChatPromptTemplate.from_template("""
-  You are a helpful virtual assistant for California parks and outdoors. 
-  Use the provided context from park data to answer the question.
-  If information is missing, respond with the best estimate or say "I'm not sure."
-  Always cite your sources, whenever possible.
+  prompt = ChatPromptTemplate.from_messages([
+        ("system",
+         "You are a helpful California Parks & Trails assistant. "
+         "Use the following context and sources from park data to answer questions."
+         "If information is missing, respond with the best estimate or say 'I'm not sure.'"
+         "Always cite your sources, whenever possible. \n\n"
+         "Context:\n{context}\n\nSources:\n{sources}"),
 
-  Context:
-  {context}
-
-
-  Question:
-  {input}
-
-                                        
-  Answer:
-                                        
-
-  Sources:
-  {sources}                                      
-  """)
+        ("human", "{question}")
+    ])
 
   # 3. Build chain
   rag_chain = (
