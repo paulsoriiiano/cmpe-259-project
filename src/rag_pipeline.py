@@ -12,16 +12,16 @@ def build_rag_chain(llm, retriever):
   """ Build a two-step RAG chain. """
 
   # 1. Retrieve documents
-  def retrieve_and_format(query):
-
+  def retrieve_and_format(inputs):
+    query = inputs["input"]
     rag_docs = retriever.invoke(query)
     rag_context = "\n\n".join([d.page_content for d in rag_docs])
     rag_sources = "\n\n".join([f"{d.metadata["title"]} information from {d.metadata["url"]}" for d in rag_docs])
 
     inputs = {
         "context": rag_context,
+        "input": query,
         "sources": rag_sources,
-        "question": query,
     }
 
     return inputs
@@ -38,7 +38,7 @@ def build_rag_chain(llm, retriever):
 
 
   Question:
-  {question}
+  {input}
 
                                         
   Answer:
