@@ -3,7 +3,7 @@ This module provides querying functions.
 """
 
 
-from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnableLambda, RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 
@@ -27,7 +27,7 @@ def build_rag_chain(llm, retriever):
     return inputs
 
   # 2. Create prompt
-  prompt = ChatPromptTemplate.from_template("""
+  prompt = PromptTemplate.from_template("""
   You are a helpful virtual assistant for California parks and outdoors. 
   Use the provided context from park data to answer the question.
   If information is missing, respond with the best estimate or say "I'm not sure."
