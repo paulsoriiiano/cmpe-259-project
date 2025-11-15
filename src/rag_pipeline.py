@@ -14,7 +14,7 @@ def build_rag_chain(llm, retriever):
   # 1. Retrieve documents
   def retrieve_and_format(query):
 
-    rag_docs = retriever.get_relevant_documents(query)
+    rag_docs = retriever.invoke(query)
     rag_context = "\n\n".join([d.page_content for d in rag_docs])
     rag_sources = "\n\n".join([f"{d.metadata["title"]} information from {d.metadata["url"]}" for d in rag_docs])
 
