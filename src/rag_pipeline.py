@@ -33,12 +33,23 @@ def build_rag_chain(llm, retriever):
          ),
 
         ("human",
-         "Use the following context and sources from park data to answer questions."
-         "If information is missing, respond with the best estimate or say 'I'm not sure.'"
-         "Always cite your sources, whenever possible. \n\n"
-         "Context:\n{context}\n\nSources:\n{sources}"
-         "Question:\n{input}\n\n"
-         "Your answer:",
+         """Use the following context and sources from park data to answer questions.
+            If information is missing, respond with the best estimate or say "I'm not sure."
+            Always cite your sources whenever possible. 
+            Format the sources as footnotes in the end of the answer.
+
+            Context:
+            {context}
+
+            Sources:
+            {sources}
+
+            Question:
+            {input}
+
+            Your answer:
+
+          """
         )
     ])
 
