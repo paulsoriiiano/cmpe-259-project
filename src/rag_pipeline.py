@@ -34,7 +34,7 @@ def build_rag_chain(llm, retriever):
          "Always cite your sources, whenever possible. \n\n"
          "Context:\n{context}\n\nSources:\n{sources}"),
 
-        ("human", "{question}")
+        ("human", "{input}")
     ])
 
   # 3. Build chain
