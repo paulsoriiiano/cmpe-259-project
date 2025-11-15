@@ -19,7 +19,7 @@ def build_rag_chain(llm, retriever):
 
     inputs = {
         "context": rag_context,
-        "input": RunnablePassthrough(),
+        "input": query,
         "sources": rag_sources,
     }
 
