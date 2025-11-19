@@ -47,12 +47,12 @@ def load_chat_model(size="small"):
         )
     elif size == "large":
         llm = HuggingFaceEndpoint(
-          repo_id = "meta-llama/Llama-3.3-70B-Instruct",
+          repo_id = "meta-llama/Meta-Llama-3-70B-Instruct",
           task = "text-generation",
           max_new_tokens = 512,
           temperature = 0.7,
           repetition_penalty = 1.03,
-          provider = "hyperbolic"
+          provider = "featherless"
         )
     else:
         print("I am not aware of this model.")
