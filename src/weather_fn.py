@@ -98,7 +98,7 @@ def get_weather(location: str, days: int = 0):
 
             forecast_lines.append(
                 f"Day {i+1}: {condition}\n" 
-                f"- Temp: {min_temp:.1f} —— {max_temp:.1f}°F\n"
+                f"- Temp: {min_temp:.1f} — {max_temp:.1f}°F\n"
                 f"- Precipitation: {precipitation:.2f} inches\n"
                 f"- Max Wind: {max_wind:.1f} mph"
             )
