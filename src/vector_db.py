@@ -3,7 +3,7 @@ Creates vector database from park data.
 """
 
 
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.document_loaders import JSONLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
