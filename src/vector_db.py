@@ -5,7 +5,7 @@ Creates vector database from park data.
 
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain.document_loaders import JSONLoader
+from langchain_community.document_loaders import JSONLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 def build_vector_db(data_path="data/ca_state_parks.json", persist_path="faiss_index"):
