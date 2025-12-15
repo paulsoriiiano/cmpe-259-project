@@ -1,0 +1,9 @@
+questions,Mistral-7B,Mistral Latency (s),Llama-3.3-70B,LLama Latency (s)
+What's the weather like in Emerald Bay?," The weather in Emerald Bay varies throughout the year. In general, the temperature ranges from 24 to 95 degrees Fahrenheit, with cooler nights and warmer days. Late summer features very warm mornings and afternoon thunderstorms, while fall is progressively cooling with mildly warm days and freezing nights, and increasing storm activity towards winter. Early fall storms can be rain, turning to snow later in the year. For current weather conditions, please check the California State Parks website or contact Emerald Bay State Park directly.
+
+           [Sources:]
+           Emerald Bay State Park information from https://www.parks.ca.gov/?page_id=506
+           Context provided.",7.0098,"The weather in Emerald Bay State Park varies greatly throughout the year. In the summer, it can be warm to hot during the day (66 to 95°F) and cool to cold at night (24 to 45°F). Later in the summer, mornings can be very warm (68 to 83°F) with afternoon thunderstorms and comfortable to slightly cool evenings (31 to 45°F). In the fall, the temperature cools down with mildly warm days (45 to 77°F) and freezing nights (20 to 36°F), with increasing storm activity towards winter. In the winter, the temperature can range from -5 to 50°F, with light to heavy snow storms, sleet, and rain. 
+
+¹",2.3217
+Will it be windy at Huntington Beach today?, The wind at Huntington Beach is currently 2 mph with gusts up to 3 mph. (Source: Parks data),3.1885,"According to the current weather information, the wind speed at Huntington State Beach is 2 mph with gusts up to 3 mph, coming from 104.03627014160156°. It doesn't seem like it will be very windy today.¹",3.8504
