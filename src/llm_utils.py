@@ -52,7 +52,7 @@ def load_chat_model(size="small"):
           max_new_tokens = 512,
           temperature = 0.7,
           repetition_penalty = 1.03,
-          provider = "featherless"
+          provider = "auto"
         )
     else:
         print("I am not aware of this model.")
